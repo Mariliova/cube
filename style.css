@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: rgba(238, 130, 238, 0.39);
+    perspective: 45rem;
+    perspective-origin: 50% 2rem;
+    position: relative;
+    transition: 2s;
+}
+
+.cube {
+    position: relative;
+    width: 4em;
+    height: 4em;
+    animation: spin 8s infinite linear;
+    transform-style: preserve-3d;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+
+}
+
+.cube>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 130, 238, 0.186);
+    border: 1px solid rgba(155, 55, 155, 0.667);
+    color: rgba(155, 55, 155, 0.667);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: transform 2s, opacity 2s;
+}
+
+.cube .cube__one {
+    opacity: .5;
+    transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(2em);
+}
+
+.cube .cube__two {
+    opacity: .5;
+    transform: scale3d(1.2, 1.2, 1.2) translateZ(2em);
+}
+
+.cube .cube__three {
+    opacity: .5;
+    transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(2em);
+}
+
+.cube .cube__four {
+    opacity: .5;
+    transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(2em);
+}
+
+.cube .cube__five {
+    opacity: .5;
+    transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(2em);
+}
+
+.cube .cube__six {
+    opacity: .5;
+    transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(2em) rotate(180deg);
+}
+
+.cube .cube__seven {
+    transform: scale3d(.8, .8, .8) rotateX(90deg) translateZ(2em);
+}
+
+.cube .cube__eight {
+    transform: scale3d(.8, .8, .8) translateZ(2em);
+}
+
+.cube .cube__nine {
+    transform: scale3d(.8, .8, .8) rotateY(90deg) translateZ(2em);
+}
+
+.cube .cube__ten {
+    transform: scale3d(.8, .8, .8) rotateX(180deg) translateZ(2em);
+}
+
+.cube .cube__eleven {
+    transform: scale3d(.8, .8, .8) rotateY(-90deg) translateZ(2em);
+}
+
+.cube .cube__twelve {
+    transform: scale3d(.8, .8, .8) rotateX(-90deg) translateZ(2em) rotate(180deg);
+}
+
+.cube:hover .cube__one {
+    transform: translateZ(7.6rem);
+}
+
+.cube:hover .cube__two {
+    transform: rotateY(30deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__three {
+    transform: rotateY(60deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__four {
+    transform: rotateY(90deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__five {
+    transform: rotateY(120deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__six {
+    transform: rotateY(150deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__seven {
+    transform: rotateY(180deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__eight {
+    transform: rotateY(210deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__nine {
+    transform: rotateY(-120deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__ten {
+    transform: rotateY(-90deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__eleven {
+    transform: rotateY(-60deg) translateZ(7.6em);
+}
+
+.cube:hover .cube__twelve {
+    transform: rotateY(-30deg) translateZ(7.6em);
+}
+
+@media only screen and (min-width: 1000px) {
+    *{
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    * {
+        font-size: 20px;
+    }
+}
